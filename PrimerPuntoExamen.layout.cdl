@@ -1,0 +1,60 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Digital2024_130
+* Top Cell Name: PrimerPuntoExamen
+* View Name:     schematic
+* Netlisted on:  Apr 30 18:03:55 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    invx1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT invx1 A Y vdd vss
+*.PININFO A:I Y:O vdd:B vss:B
+MNM0 Y A vss vss nfet_01v8 W=420n L=150n M=1
+MPM0 Y A vdd vdd pfet_01v8 W=550n L=150n M=1
+.ENDS
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    PrimerPuntoExamen
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PrimerPuntoExamen D Q QN clk vdd vss
+*.PININFO D:I clk:I Q:O QN:O vdd:B vss:B
+XI7 clk clkn vdd vss / invx1
+XI6 net1 QN vdd vss / invx1
+XI5 net6 net9 vdd vss / invx1
+XI4 net5 net7 vdd vss / invx1
+XI3 net6 Q vdd vss / invx1
+XI2 net1 net6 vdd vss / invx1
+XI1 net4 net5 vdd vss / invx1
+XI0 D net3 vdd vss / invx1
+MPM6 net4 clk net7 vdd pfet_01v8 W=550n L=150n M=1
+MPM7 net5 clk net1 vdd pfet_01v8 W=550n L=150n M=1
+MPM8 net1 clkn net9 vdd pfet_01v8 W=550n L=150n M=1
+MPM0 net3 clkn net4 vdd pfet_01v8 W=550n L=150n M=1
+MNM6 net4 clkn net7 vss nfet_01v8 W=420n L=150n M=1
+MNM7 net5 clkn net1 vss nfet_01v8 W=420n L=150n M=1
+MNM8 net1 clk net9 vss nfet_01v8 W=420n L=150n M=1
+MNM0 net3 clk net4 vss nfet_01v8 W=420n L=150n M=1
+.ENDS
+

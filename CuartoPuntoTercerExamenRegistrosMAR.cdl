@@ -1,0 +1,102 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Digital2024_130
+* Top Cell Name: CuartoPuntoTercerExamenRegistrosMAR
+* View Name:     schematic
+* Netlisted on:  Jun 26 16:05:42 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    invx1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT invx1 A Y vdd vss
+*.PININFO A:I Y:O vdd:B vss:B
+MNM0 Y A vss vss nfet_01v8 W=420n L=150n M=1
+MPM0 Y A vdd vdd pfet_01v8 W=550n L=150n M=1
+.ENDS
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    NANDTriEstado
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NANDTriEstado A B CLK CLKN Y vdd vss
+*.PININFO A:I B:I CLK:I CLKN:I Y:O vdd:B vss:B
+MPM2 Y CLK net1 vdd pfet_01v8 W=5.04u L=150n M=1
+MPM1 net1 B vdd vdd pfet_01v8 W=5.04u L=150n M=1
+MPM0 net1 A vdd vdd pfet_01v8 W=5.04u L=150n M=1
+MNM2 net3 B vss vss nfet_01v8 W=1.26u L=150n M=1
+MNM1 net2 A net3 vss nfet_01v8 W=1.26u L=150n M=1
+MNM0 Y CLKN net2 vss nfet_01v8 W=1.26u L=150n M=1
+.ENDS
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    NAND
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND A B Y vdd vss
+*.PININFO A:I B:I Y:O vdd:B vss:B
+MNM1 Y A net8 vss nfet_01v8 W=840n L=150n M=1
+MNM2 net8 B vss vss nfet_01v8 W=840n L=150n M=1
+MPM1 Y B vdd vdd pfet_01v8 W=5.04u L=150n M=1
+MPM0 Y A vdd vdd pfet_01v8 W=5.04u L=150n M=1
+.ENDS
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    PrimerPuntoTercerExamen
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PrimerPuntoTercerExamen CLK D Q RESETN vdd vss
+*.PININFO CLK:I D:I RESETN:I Q:O vdd:B vss:B
+XI7 CLK CLKN vdd vss / invx1
+XI6 net5 Q vdd vss / invx1
+XI5 net5 net6 vdd vss / invx1
+XI2 net2 net3 vdd vss / invx1
+XI0 D net1 vdd vss / invx1
+MPM3 net4 CLK net3 vdd pfet_01v8 W=1.26u L=150n M=1
+MPM2 net4 CLKN net6 vdd pfet_01v8 W=1.26u L=150n M=1
+MPM0 net1 CLKN net2 vdd pfet_01v8 W=1.26u L=150n M=1
+MNM3 net4 CLKN net3 vss nfet_01v8 W=420n L=150n M=1
+MNM2 net4 CLK net6 vss nfet_01v8 W=420n L=150n M=1
+MNM0 net1 CLK net2 vss nfet_01v8 W=420n L=150n M=1
+XI3 net3 RESETN CLK CLKN net2 vdd vss / NANDTriEstado
+XI9 net4 RESETN net5 vdd vss / NAND
+.ENDS
+
+************************************************************************
+* Library Name: Digital2024_130
+* Cell Name:    CuartoPuntoTercerExamenRegistrosMAR
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT CuartoPuntoTercerExamenRegistrosMAR CLK D0 D1 D2 D3 RESET Y0 Y1 Y2 Y3 
++ vdd vss
+*.PININFO CLK:I D0:I D1:I D2:I D3:I RESET:I Y0:O Y1:O Y2:O Y3:O vdd:B vss:B
+XI3 CLK D3 Y3 RESET vdd vss / PrimerPuntoTercerExamen
+XI2 CLK D2 Y2 RESET vdd vss / PrimerPuntoTercerExamen
+XI1 CLK D1 Y1 RESET vdd vss / PrimerPuntoTercerExamen
+XI0 CLK D0 Y0 RESET vdd vss / PrimerPuntoTercerExamen
+.ENDS
+

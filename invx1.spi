@@ -1,0 +1,42 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : invx1                                        *
+* Netlisted  : Tue Apr 30 12:11:43 2024                     *
+* Pegasus Version: 23.20-p013 Tue Jan 9 12:32:47 PST 2024   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 R(res_generic_m1) met1_res met1(P) met1(N)
+*.DEVTMPLT 1 R(res_generic_m2) met2_res met2(P) met2(N)
+*.DEVTMPLT 2 R(res_generic_m3) met3_res met3(P) met3(N)
+*.DEVTMPLT 3 R(res_generic_m4) met4_res met4(P) met4(N)
+*.DEVTMPLT 4 R(res_generic_m5) met5_res met5(P) met5(N)
+*.DEVTMPLT 5 R(RES_GENERIC_ND) diff_res np_term(P) np_term(N)
+*.DEVTMPLT 6 R(RES_GENERIC_PD) diff_res pp_term(P) pp_term(N)
+*.DEVTMPLT 7 MN(nfet_01v8) nfet_01v8_rec nSourceDrain(D) nfet(G) nSourceDrain(S) pwell(B)
+*.DEVTMPLT 8 MP(pfet_01v8) pfet_01v8_rec pSourceDrain(D) pfet(G) pSourceDrain(S) nwell(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nfet_01v8_CDNS_714500693323                     *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nfet_01v8_CDNS_714500693323 2 3
+** N=5 EP=2 FDC=1
+M0 2 3 1 1 nfet_01v8 L=1.5e-07 W=4.2e-07 $X=0 $Y=0 $dt=7
+.ends nfet_01v8_CDNS_714500693323
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pfet_01v8_CDNS_714500693324                     *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pfet_01v8_CDNS_714500693324 1 3
+** N=5 EP=2 FDC=1
+M0 2 3 1 2 pfet_01v8 L=1.5e-07 W=5.5e-07 $X=0 $Y=0 $dt=8
+.ends pfet_01v8_CDNS_714500693324
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: invx1                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt invx1
+** N=7 EP=0 FDC=2
+X2 3 4 nfet_01v8_CDNS_714500693323 $T=600 205 0 0 $X=195 $Y=55
+X3 3 4 pfet_01v8_CDNS_714500693324 $T=750 1975 0 180 $X=155 $Y=1245
+.ends invx1

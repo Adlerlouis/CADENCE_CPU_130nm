@@ -1,0 +1,75 @@
+\o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 01/17/2024 18:07 (csvcm36c-7) $
+\o Sub version:		sub-version  s353 
+\o Arguments:		-mpssession virtuoso18544 -mpshost ccslvcbasselic 
+\o Working Directory:	ccslvcbasselic:/home/al-labse15/cadsky
+\o 64-bit offsets
+\o Qt version: 		5.9.1
+\o Log file is "/home/al-labse15/cadsky/libManager.log".
+\o Opening libManager window.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(16 85 1280 657))
+\o MPS virtuoso types registered: 65
+\o changeWorkingDir("/home/al-labse15/cadsky") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
+\o Library Manager customization server connected.
+\a nrResizeWindow(cdsLibManager list(0 23 1280 657))
+\a cdsLibManager->libListBox->value = "Digital2024_130"
+\a cdsLibManager->libLineEdit->value = "Digital2024_130"
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->cellListBox 23 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "Digital2024_130"
+\a cdsLibManager->libLineEdit->value = "Digital2024_130"
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libListBox->value = "Digital2024_130"
+\a cdsLibManager->libLineEdit->value = "Digital2024_130"
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->cellListBox 23 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "Digital2024_130"
+\a cdsLibManager->libLineEdit->value = "Digital2024_130"
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->cellListBox 23 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "Digital2024_130"
+\a cdsLibManager->libLineEdit->value = "Digital2024_130"
+\a cdsLibManager->cellListBox->value = "NovenoPuntoTercerExamenIRDEC"
+\a cdsLibManager->cellLineEdit->value = "NovenoPuntoTercerExamenIRDEC"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)

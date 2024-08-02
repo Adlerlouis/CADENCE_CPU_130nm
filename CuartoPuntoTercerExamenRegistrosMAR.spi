@@ -1,0 +1,15 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : CuartoPuntoTercerExamenRegistrosMAR          *
+* Netlisted  : Wed Jun 26 16:06:09 2024                     *
+* Pegasus Version: 23.20-p013 Tue Jan 9 12:32:47 PST 2024   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: CuartoPuntoTercerExamenRegistrosMAR             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt CuartoPuntoTercerExamenRegistrosMAR
+** N=12 EP=0 FDC=0
+.ends CuartoPuntoTercerExamenRegistrosMAR

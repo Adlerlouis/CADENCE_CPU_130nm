@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      al-labse15
+HostName                       ccslvcbasselic
+ProcessIdentifier              19050
+ProcessCreationTime_UTC        1719510750
+ProcessCreationTime_Readable   Thu Jun 27 11:52:30 2024 CST
+AppIdentifier                  /opt/cadence/IC61835/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/al-labse15/cadsky/libManager.log
+TimeEditLocked                 Thu Jun 27 11:52:30 2024 CST

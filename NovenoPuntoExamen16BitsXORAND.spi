@@ -1,0 +1,15 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : NovenoPuntoExamen16BitsXORAND                *
+* Netlisted  : Wed Jun 19 19:31:34 2024                     *
+* Pegasus Version: 23.20-p013 Tue Jan 9 12:32:47 PST 2024   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NovenoPuntoExamen16BitsXORAND                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NovenoPuntoExamen16BitsXORAND
+** N=974 EP=0 FDC=0
+.ends NovenoPuntoExamen16BitsXORAND

@@ -1,0 +1,10 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.8 - CAT37 01/17/2024 18:09 (csvcm36c-7) $
+\o Sub version:		sub-version  s353 
+\o Arguments:		-display localhost:10.0 -mpssession virtuoso20744 -mpshost ccslvcbasselic -mpsversion 6.18 -namespace CDBA -cdslib /home/al-labse15/cadsky/cds.lib 
+\o Working Directory:	ccslvcbasselic:/home/al-labse15/cadsky
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		5.9.1
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrResizeWindow(cdsLibEditor list(0 32 500 400))
+\a exit(0)

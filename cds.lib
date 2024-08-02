@@ -1,0 +1,7 @@
+# File Created by  at Wed Apr  3 23:01:03 2024
+# assisted by CdsLibEditor
+DEFINE analogLib $CDS_HOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE basic $CDS_HOME/tools/dfII/etc/cdslib/basic
+DEFINE sky130_fd_pr_main /opt/cadence/kits/sky130_release_0.0.3/libs/sky130_fd_pr_main
+DEFINE Digital2024 /home/aroman/cadsky/Digital2024
+DEFINE Digital2024_130 /home/al-labse15/cadsky/Digital2024_130
